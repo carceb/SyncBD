@@ -9,12 +9,12 @@ Public Class ServiceSyncBD
         timer1.Interval = intervaloTimer
         AddHandler timer1.Elapsed, AddressOf timer1_Tick
         timer1.Enabled = True
-        objectLibrary.WriteErrorLog("Servicio de sincronización BETA 1 Inicio del Servicio sincronizando cada: " & intervaloTimer & " milisegundos")
+        objectLibrary.WriteErrorLog("Servicio de sincronización Inicio del Servicio sincronizando cada: " & intervaloTimer & " milisegundos")
     End Sub
 
     Protected Overrides Sub OnStop()
         timer1.Enabled = False
-        objectLibrary.WriteErrorLog("Servicio de sincronización BETA 1 detenido, gracias por probar.")
+        objectLibrary.WriteErrorLog("Servicio de sincronización detenido, gracias por probar.")
     End Sub
     Private Sub timer1_Tick(sender As Object, e As ElapsedEventArgs)
         Dim objetoSincronizacion As New Sincronizacion
