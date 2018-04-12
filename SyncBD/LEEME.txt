@@ -1,0 +1,25 @@
+REQUERIMIENTOS MINIMOS
+.NET FRAMEWORK 4.5
+MySQL Connector .NET
+MetroFramework.Design.dll
+MetroFramework.dll
+MetroFramework.Fonts.dll
+InstallUtil.exe
+Carpeta Logs dentro del proyecto SyncBD
+
+Pasos para la instalacion:
+Se debe copiar la Carpeta SyncBD dentro de C:\Program Files\SyncBD
+Se debe instalar el MySQL Connector .NET
+Abrir el cmd como administrador 
+Ecribir: cd C:\Program Files\SyncBD
+Escribir InstallUtil.exe SyncBD.exe
+El WinService deberia instalarse
+Abrir los Servicios de Windows
+Buscar el Servicio Llamado :SyncBD Sistema de Sincronización Base de Datos
+Clic derecho: Iniciar
+
+Para desinstalarlo:
+Clic derecho: Detener
+Abrir el cmd como administrador
+Ecribir: cd C:\Program Files\SyncBD
+Escribir InstallUtil.exe/u SyncBD.exe

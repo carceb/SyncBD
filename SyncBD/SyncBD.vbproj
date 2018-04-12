@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C77C725-3A1A-4536-AB21-F5D6FA2B1072}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SyncBD.ServiceSyncBD</StartupObject>
+    <RootNamespace>SyncBD</RootNamespace>
+    <AssemblyName>SyncBD</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SyncBD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SyncBD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\AccessSqlHelper.vb" />
+    <Compile Include="Clases\CodesCat.vb" />
+    <Compile Include="Clases\CodesCatSub.vb" />
+    <Compile Include="Clases\CustomersBill.vb" />
+    <Compile Include="Clases\CustomersBillPrCol.vb" />
+    <Compile Include="Clases\CustomersBillPrsn.vb" />
+    <Compile Include="Clases\Inventory.vb" />
+    <Compile Include="Clases\InventoryDTS.vb" />
+    <Compile Include="Clases\InventoryItemXRef.vb" />
+    <Compile Include="Clases\InventoryPricing.vb" />
+    <Compile Include="Clases\ManejoXML.vb" />
+    <Compile Include="Clases\MySqlHelper.vb" />
+    <Compile Include="Clases\Orders.vb" />
+    <Compile Include="Clases\OrdersDetail.vb" />
+    <Compile Include="Controlador\MySqlCodesCat.vb" />
+    <Compile Include="Controlador\MySqlCodesCatSub.vb" />
+    <Compile Include="Controlador\MySqlCustomersBill.vb" />
+    <Compile Include="Controlador\MySqlCustomersBillProCol.vb" />
+    <Compile Include="Controlador\MySqlCustomersBillPrsn.vb" />
+    <Compile Include="Controlador\MySqlInventory.vb" />
+    <Compile Include="Controlador\MySqlInventoryDTS.vb" />
+    <Compile Include="Controlador\MySqlInventoryItemsXRef.vb" />
+    <Compile Include="Controlador\MySqlInventoryPricing.vb" />
+    <Compile Include="Controlador\MySqlOrders.vb" />
+    <Compile Include="Controlador\MySqlOrdersDetail.vb" />
+    <Compile Include="Controlador\Sincronizacion.vb" />
+    <Compile Include="Library.vb" />
+    <Compile Include="Modelo\CMySqlCustomersBill.vb" />
+    <Compile Include="Modelo\CMySqlCustomersBillPrsn.vb" />
+    <Compile Include="Modelo\CMySqlInventory.vb" />
+    <Compile Include="Modelo\CMySqlInventoryItemXRef.vb" />
+    <Compile Include="Modelo\CMySqlInventoryPricing.vb" />
+    <Compile Include="Modelo\CMySqlOrders.vb" />
+    <Compile Include="Modelo\CMySqlOrdersDetail.vb" />
+    <Compile Include="Modulos\SyncBDModuloPrincipal.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.vb">
+      <DependentUpon>ProjectInstaller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInstaller.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiceSyncBD.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiceSyncBD.Designer.vb">
+      <DependentUpon>ServiceSyncBD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceSyncBD.resx">
+      <DependentUpon>ServiceSyncBD.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LEEME.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
