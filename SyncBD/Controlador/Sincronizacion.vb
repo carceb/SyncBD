@@ -22,6 +22,7 @@ Public Class Sincronizacion 'Controla todos los objetos encargados de la sincron
         '*******************************************************
         'Se debe revisar como hacer este proceso
         'objetoInventoryDTS.SincronizarInventoryDTS()
+        'Por ahora desactivado
         '*******************************************************
 
         objetoCustomersBill.SincronizarCustomersBill()
