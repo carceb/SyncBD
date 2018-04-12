@@ -15,10 +15,10 @@ Ecribir: cd C:\Program Files\SyncBD
 Escribir InstallUtil.exe SyncBD.exe
 El WinService deberia instalarse
 Abrir los Servicios de Windows
-Buscar el Servicio Llamado :SyncBD Sistema de Sincronización Base de Datos
+Buscar el Servicio Llamado :SyncBD Sistema de SincronizaciÃ³n Base de Datos
 Clic derecho: Iniciar
 
-Para desinstalarlo:
+Pasos para la desinstalacion:
 Clic derecho: Detener
 Abrir el cmd como administrador
 Ecribir: cd C:\Program Files\SyncBD
